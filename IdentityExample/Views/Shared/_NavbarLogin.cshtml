@@ -1,0 +1,17 @@
+﻿@using System.Security.Claims;
+
+<ul class="navbar-nav me-0">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            @User.Identity.Name
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" asp-controller="Home" asp-action="Claims">Claims</a></li>
+            <li><a class="dropdown-item" asp-controller="Home" asp-action="UserEdit">Profil Güncelle</a></li>
+            <li><a class="dropdown-item" asp-controller="Home" asp-action="PasswordChange">Şifre Değiştir</a></li>
+            <li><a class="dropdown-item" asp-route-returnUrl="@Context.Request.Path" asp-controller="Home" asp-action="logout">Çıkış yap</a></li>
+        </ul>
+    </li>
+
+</ul>
+
